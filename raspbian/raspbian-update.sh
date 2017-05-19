@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #load global variables file
-wget --progress=bar:force -q https://raw.githubusercontent.com/litecoin-association/LitecoinNode/master/glob-vars.sh -P /root
+wget --progress=bar:force -q https://raw.githubusercontent.com/litecoin-association/LitecoinNode/0.13.2/glob-vars.sh -P /root
 source /root/glob-vars.sh
 rm -f -v /root/glob-vars.sh
 
@@ -31,10 +31,10 @@ then
 	if test $ARCH -eq "64"
 	then
 	LITECOIN_DL_URL=$LITECOIN_DL_URL_64
-	LITECOIN_VER="litecoin-0.10.4.0-linux64"
+	LITECOIN_VER="litecoin-0.13.2-x86_64-linux-gnu"
 	else
 	LITECOIN_DL_URL=$LITECOIN_DL_URL_32
-	LITECOIN_VER="litecoin-0.10.4.0-linux32"
+	LITECOIN_VER="litecoin-0.13.2-i686-pc-linux-gnu"
 	fi
 
 	#download, unpack and move the new litecoind binary
